@@ -1,13 +1,8 @@
-/**
- * cbpAnimatedHeader.js v1.0.0
- * http://www.codrops.com
- *
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- * 
- * Copyright 2013, Codrops
- * http://www.codrops.com
+/*!
+ * NCI HCC2 Project 2015 - Developed by ConorKe0gh
+ * NCISP Application
  */
+ 
 var cbpAnimatedHeader = (function() {
 
 	var docElem = document.documentElement,

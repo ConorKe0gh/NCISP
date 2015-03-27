@@ -1,11 +1,6 @@
-/* jqBootstrapValidation
- * A plugin for automating validation on Twitter Bootstrap formatted forms.
- *
- * v1.3.6
- *
- * License: MIT <http://opensource.org/licenses/mit-license.php> - see LICENSE file
- *
- * http://ReactiveRaven.github.com/jqBootstrapValidation/
+/*!
+ * NCI HCC2 Project 2015 - Developed by ConorKe0gh
+ * NCISP Application
  */
 
 (function( $ ){

@@ -1,0 +1,70 @@
+{
+  "require" : {
+    "facebook/php-sdk-v4" : "4.0.*"
+  }
+}
+FacebookSession::setDefaultApplication('1433488386964651', '6c323524a148a8fecbd19d35d4e4583b');
+
+$helper = new FacebookRedirectLoginHelper('URL here');
+$loginUrl = $helper->getLoginUrl();
+
+$helper = new FacebookRedirectLoginHelper();
+
+try {
+  $session = $helper->getSessionFromRedirect();
+} 
+
+catch(FacebookRequestException $ex) {
+
+} 
+catch(\Exception $ex) {
+
+}
+
+if ($session) {
+
+}
+
+$helper = new FacebookCanvasLoginHelper();
+
+try {
+  $session = $helper->getSession();
+} 
+
+catch(FacebookRequestException $ex) {
+
+} 
+catch(\Exception $ex) {
+
+}
+if ($session) {
+
+}
+
+$helper = new FacebookJavaScriptLoginHelper();
+try {
+  $session = $helper->getSession();
+
+  } 
+
+catch(FacebookRequestException $ex) {
+
+} 
+
+catch(\Exception $ex) {
+
+}
+
+if ($session) {
+
+}
+
+$session = new FacebookSession('access token here');
+
+$request = new FacebookRequest($session, 'GET', '/me');
+$response = $request->execute();
+$graphObject = $response->getGraphObject();
+
+$me = (new FacebookRequest(
+  $session, 'GET', '/me'
+))->execute()->getGraphObject(GraphUser::className());

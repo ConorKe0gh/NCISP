@@ -11,10 +11,10 @@
 
     <title>NCISP - National College Of Ireland.</title>
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    <!-- My Own CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
@@ -23,14 +23,66 @@
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
 
+    <script language="JavaScript">
+
+    <!-- This script and many more are available free online at -->
+    <!-- The JavaScript Source!! http://www.javascriptsource.com -->
+
+    <!-- Begin
+    // Insert number of questions
+    var numQues = 8;
+
+    // Insert number of choices in each question
+    var numChoi = 3;
+
+    // Insert number of questions displayed in answer area
+    var answers = new Array(8);
+
+    // Insert answers to questions
+    answers[0] = "Circuit switching";
+    answers[1] = "Crossbar";
+    answers[2] = "Virtual-circuit packet switching";
+    answers[3] = "2000";
+    answers[4] = "TSI";
+    answers[5] = "Time-division";
+    answers[6] = "All the above";
+    answers[7] = "Data transfer";
+
+    // Do not change anything below here ...
+    function getScore(form) {
+      var score = 0;
+      var currElt;
+      var currSelection;
+      for (i=0; i<numQues; i++) {
+        currElt = i*numChoi;
+        for (j=0; j<numChoi; j++) {
+          currSelection = form.elements[currElt + j];
+          if (currSelection.checked) {
+            if (currSelection.value == answers[i]) {
+              score++;
+              break;
+            }
+          }
+        }
+      }
+      score = Math.round(score/numQues*100);
+      form.percentage.value = score + "%";
+      var correctAnswers = "";
+      for (i=1; i<=numQues; i++) {
+        correctAnswers += i + ". " + answers[i-1] + "\r\n";
+      }
+      form.solutions.value = correctAnswers;
+    }
+    //  End -->
+    </script>
+
 </head>
 
-<body id="page-top" class="index">
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            <!-- Grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -48,10 +100,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Application</a>
+                        <a href="#portfolio">Services</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">Login</a>
+                        <a href="#about">ExamsBuddy</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
@@ -87,13 +139,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Application</h2>
+                    <h2>Services</h2>
                     <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                    <a href="https://myncistudent.ncirl.ie" target="_blank" 
+                    onclick="location.href = '#'" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -103,7 +156,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                    <a href="https://moodle.ncirl.ie/login/index.php" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -133,7 +186,7 @@
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                    <a href="facebookintegration.html" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
                                 <i class="fa fa-search-plus fa-3x"></i>
@@ -161,21 +214,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Login</h2>
+                    <h2>ExamsBuddy</h2>
                     <hr class="star-light">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>NCISP is a free Android App for all NCI College Students. The app is a one stop place that intergrates moodle + student portal + norma smurf library + many, many more features.</p>
+                    <p>Our unique free learning platform gives you the tools to achieve success. Create, Discover and Share learning resources today.</P><p>Looking to get better results in your exams? Visit our study portals for tips, sample resources and tools to give you the edge.</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Whether you're a student looking to study or get tips for your exam's, Enjoy the social life that NCISU brings, or if you want to view your accademic and social calendar, NCISP is perfect for you!</p>
+                    <p>Learning with others is more effective. Build learning communities in minutes – create groups, discuss, share resources. Let the knowledge flow!</p> <p> Never be more than a swipe away from learning, no matter where you are. The NCISP Platform is ideal for reviewing the resources you’ve created.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="https://myncistudent.ncirl.ie/" class="btn btn-lg btn-outline">
-                        <i class="fa fa-download"></i>  Login to NCI
-                    </a>
+                    <a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-download"></i>  Sign up to ExamsBuddy </a>
                 </div>
             </div>
         </div>
@@ -249,10 +301,10 @@
                         <h3>Become apart of us</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="https://www.facebook.com" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/NCISPApp" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.googleplus.com" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                <a href="https://plus.google.com/116635566586326290487/" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
                             </li>
                             <li>
                                 <a href="https://www.twitter.com" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
@@ -267,7 +319,7 @@
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>About NCISP</h3>
-                        <p>Our Android app that implements all aspects of NCI into one app, giving student's an opportunity to experience NCI academically and socially.</p>
+                        <p>One Website, that facilitates NCI students Academically And Socially. Accessible from Mobiles, Tablets & Computers.</p>
                     </div>
                 </div>
             </div>
@@ -303,21 +355,20 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            
+                            <iframe src="#" height="600" width="100%" div align="center"></iframe>
+                            
                             <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                <li>Website:
+                                    <strong><a href="https://moodle.ncirl.ie/my/">NCI </a>
                                     </strong>
                                 </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                <li>Version:
+                                    <strong><p3> Live - 5.0</p3>
                                     </strong>
                                 </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                <li>Help:
+                                    <strong><a href="#">Frequently Asked Questions</a>
                                     </strong>
                                 </li>
                             </ul>
@@ -340,21 +391,20 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+            
+                            <iframe src="https://moodle.ncirl.ie/my/" height="700" width="100%" div align="center"></iframe>
+                            
                             <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                <li>Website:
+                                    <strong><a href="https://moodle.ncirl.ie/my/">Moodle </a>
                                     </strong>
                                 </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                <li>Version:
+                                    <strong><p3> Live - 5.0</p3>
                                     </strong>
                                 </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                <li>Help:
+                                    <strong><a href="#">Frequently Asked Questions</a>
                                     </strong>
                                 </li>
                             </ul>
@@ -414,24 +464,29 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
+
+
+
+                        <div class="dropdownmenu">
+                          <h2>Timetable</h2><br>
+                          <p>Please select your group timetable from the dropdown menu.</p><br>
+
+                         <select onchange='document.smallimage.src= this.value;document.header.background.src=this.value'>
+                        <option selected='selected' value='null'>Choose</option>
+                        <option value='img/HCC1.png'>HCC1</option>
+                        <option value='img/HCC2.png'>HCC2</option>
+                        <option value='img/BSHC1.png'>BSHC1</option>
+                        <option value='img/BSHC2.png'>BSHC2</option>
+                        <option value='img/BSHC4.png'>BSHC3</option>
+                        <option value='img/MSC1.png'>MSC1</option>
+                        <option value='img/MSC2.png'>MSC2</option>
+                        </select><br><br>
+                        <img name='smallimage' id='smallimage' onmouseout="width=420; height=260" onmouseover="width=900; height=550;" repeat();>
+
+
+
+
+                        <br>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -439,7 +494,7 @@
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -453,7 +508,7 @@
                         <div class="modal-body">
                             <h2>Project Title</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
+                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
                             <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
                             <ul class="list-inline item-details">
                                 <li>Client:
@@ -476,6 +531,7 @@
             </div>
         </div>
     </div>
+</div>
     <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -488,29 +544,77 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Project Title</h2>
+                            <div class="modal-body">
+                            <h2>Data Communications & Networking Quiz</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
+
+                            <form name="quiz">
+                            <b> 1. Which type of switching uses the entire capacity of a dedicated channel? </b>
+                            <ul style="margin-top: 1pt">
+                              <li><input type="radio" name="q1" value="Colorful Style Symbols">  Circuit switching</li>
+                              <li><input type="radio" name="q1" value="Cascading Style Sheets">  Datagram packet switching</li>
+                              <li><input type="radio" name="q1" value="Computer Style Symbols">  Message switching</li>
                             </ul>
+                            <b>2. The __________ is a device that connects n inputs to m outputs.</b>
+                            <ul style="margin-top: 1pt">
+                              <li><input type="radio" name="q2" value="Dramatic HTML">  RAM</li>
+                              <li><input type="radio" name="q2" value="Design HTML">  Crossbar</li>
+                              <li><input type="radio" name="q2" value="Dynamic HTML">  Modem</li>
+                            </ul>
+                            <b>3. In what type of switching do all the packets of a message follow the same path?</b>
+                            <ul style="margin-top: 1pt">
+                              <li><input type="radio" name="q3" value="Microsoft">  Circuit switching</li>
+                              <li><input type="radio" name="q3" value="Netscape">  Datagram packet switching</li>
+                              <li><input type="radio" name="q3" value="Sun Micro Systems">  Virtual-circuit packet switching</li>
+                            </ul>
+                            <b>4. How many crosspoints are needed in a single-stage switch with 40 inputs and 50 outputs?</b>
+                            <ul style="margin-top: 1pt">
+                              <li><input type="radio" name="q4" value="Cascading Gate Interaction">  50 </li>
+                              <li><input type="radio" name="q4" value="Common GIF Interface">  2000</li>
+                              <li><input type="radio" name="q4" value="Common Gateway Interface">  55</li>
+                            </ul>
+                            <b>5. A device called _______ controls the order of delivery of slot values that are stored in a RAM.</b>
+                            <ul style="margin-top: 1pt">
+                              <li><input type="radio" name="q4" value="Cascading Gate Interaction">  Crosspoin </li>
+                              <li><input type="radio" name="q4" value="Common GIF Interface">  Transceiver</li>
+                              <li><input type="radio" name="q4" value="Common Gateway Interface">  TSI</li>
+                            </ul>
+                            <b>6.  In _________ circuit switching, delivery of data is delayed because data must be stored and retrieved from RAM.</b>
+                            <ul style="margin-top: 1pt">
+                              <li><input type="radio" name="q4" value="Cascading Gate Interaction">  Time-division</li>
+                              <li><input type="radio" name="q4" value="Common GIF Interface"> Virtual-circuit packet switching</li>
+                              <li><input type="radio" name="q4" value="Common Gateway Interface"> Datagram packet switching</li>
+                            </ul>
+                            <b>7. Operation of a switched virtual circuit involves __________.</b>
+                            <ul style="margin-top: 1pt">
+                              <li><input type="radio" name="q4" value="Cascading Gate Interaction"> Data transfer</li>
+                              <li><input type="radio" name="q4" value="Common GIF Interface"> Connection establishment</li>
+                              <li><input type="radio" name="q4" value="Common Gateway Interface"> All the above</li>
+                            </ul>
+                            <b>8. Operation of a permanent virtual circuit involves __________.</b>
+                            <ul style="margin-top: 1pt">
+                              <li><input type="radio" name="q4" value="Cascading Gate Interaction"> Data transfer</li>
+                              <li><input type="radio" name="q4" value="Common GIF Interface">  Connection release</li>
+                              <li><input type="radio" name="q4" value="Common Gateway Interface"> Connection establishment</li>
+                            </ul><br>
+
+                            <input type="button" value="Get score" onClick="getScore(this.form)">
+                            <input type="reset" value="Clear answers"><br>
+                            <br><br><p> Score = <strong><input class="bgclr" type="text" size="5" name="percentage" disabled></strong><br><br>
+                            Correct answers:<br>
+                            <textarea class="bgclr" name="solutions" wrap="virtual" rows="8" cols="30" disabled>
+                            </textarea>
+                            </form>
+
+                             <br>
+                            
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
         </div>
     </div>
 
